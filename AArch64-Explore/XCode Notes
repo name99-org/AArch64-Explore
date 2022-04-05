@@ -1,0 +1,23 @@
+*** Run the project as root
+Need to run the binary as root (sudo) to use the performance counter dylib.
+go to Product -> Scheme -> Edit Scheme then in
+Run/Info/Debug Process as: set to run as root.
+
+*** Give the project JIT privileges (so can construct assembly)
+Choose the project in the sidebar, choose the project from the bar at top of the
+editor window so Signing and Capabilities is visible, and REMOVE the Hardened
+Runtime by clicking the (X).
+https://developer.apple.com/documentation/xcode/adding-capabilities-to-your-app
+
+*** Set the language to C++20. Default is g++17.
+Go to the Build Settings stuff as above, choose Info (next to Build Settings),
+and choose the Project from the sidebar. This should give you a bunch of
+compiler settings; of which one is Apple Clang - Language C++. Choose C++20.
+
+*** Optimization (scheme)
+The probes written in C you obviously want to run fully optimized (the Release scheme).
+For the assembly probes it doesn't make much difference but the current version of
+ XCode I am using will not handle them correctly using the Release scheme, so you
+ have to use the AArch64-Explore (ie debug) scheme. I've no idea what that's about
+ and lost interest in trying to figure out the particular XCode weirdness that was
+ responsible.

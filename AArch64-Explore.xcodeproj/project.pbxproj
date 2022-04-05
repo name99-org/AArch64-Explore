@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6CA7E56E2717967C0069DB71 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7E56D2717967C0069DB71 /* main.cpp */; };
+		6CC1EB95272B692000C1B166 /* ProbeLatency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CC1EB94272B692000C1B166 /* ProbeLatency.cpp */; };
+		6CC1EB97272CB2E300C1B166 /* ProbeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CC1EB96272CB2E300C1B166 /* ProbeCache.cpp */; };
+		6CC1EB9C273CBAAA00C1B166 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC1EB9A273CBA8D00C1B166 /* Accelerate.framework */; platformFilters = (maccatalyst, macos, ); };
+		6CCA291C27179C58006E0C69 /* m1cycles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA291A271798AF006E0C69 /* m1cycles.cpp */; };
+		6CCA292127190C8F006E0C69 /* dataBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA292027190C8F006E0C69 /* dataBuffer.cpp */; };
+		6CCA292827236DF5006E0C69 /* ProbeStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA292727236DF5006E0C69 /* ProbeStream.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,19 @@
 /* Begin PBXFileReference section */
 		6CA7E56A2717967C0069DB71 /* AArch64-Explore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AArch64-Explore"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA7E56D2717967C0069DB71 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6CC1EB94272B692000C1B166 /* ProbeLatency.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProbeLatency.cpp; sourceTree = "<group>"; };
+		6CC1EB96272CB2E300C1B166 /* ProbeCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProbeCache.cpp; sourceTree = "<group>"; };
+		6CC1EB98272CB32400C1B166 /* General.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
+		6CC1EB9A273CBA8D00C1B166 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		6CCA291A271798AF006E0C69 /* m1cycles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = m1cycles.cpp; sourceTree = "<group>"; };
+		6CCA291B271798AF006E0C69 /* m1cycles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m1cycles.h; sourceTree = "<group>"; };
+		6CCA291D27179CDB006E0C69 /* XCode Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = "XCode Notes"; sourceTree = "<group>"; };
+		6CCA291E2717CF53006E0C69 /* assemblyBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = assemblyBuffer.h; sourceTree = "<group>"; };
+		6CCA291F27190A5E006E0C69 /* dataBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dataBuffer.h; sourceTree = "<group>"; };
+		6CCA292027190C8F006E0C69 /* dataBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dataBuffer.cpp; sourceTree = "<group>"; };
+		6CCA29222720EB0A006E0C69 /* AArch64-Explore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AArch64-Explore.entitlements"; sourceTree = "<group>"; };
+		6CCA292627236DF5006E0C69 /* Probes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Probes.h; sourceTree = "<group>"; };
+		6CCA292727236DF5006E0C69 /* ProbeStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProbeStream.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC1EB9C273CBAAA00C1B166 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +63,7 @@
 			children = (
 				6CA7E56C2717967C0069DB71 /* AArch64-Explore */,
 				6CA7E56B2717967C0069DB71 /* Products */,
+				6CC1EB99273CBA8D00C1B166 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +78,37 @@
 		6CA7E56C2717967C0069DB71 /* AArch64-Explore */ = {
 			isa = PBXGroup;
 			children = (
+				6CCA29222720EB0A006E0C69 /* AArch64-Explore.entitlements */,
+				6CCA291D27179CDB006E0C69 /* XCode Notes */,
 				6CA7E56D2717967C0069DB71 /* main.cpp */,
+				6CCA292627236DF5006E0C69 /* Probes.h */,
+				6CCA292727236DF5006E0C69 /* ProbeStream.cpp */,
+				6CC1EB94272B692000C1B166 /* ProbeLatency.cpp */,
+				6CC1EB96272CB2E300C1B166 /* ProbeCache.cpp */,
+				6CCA2919271798A7006E0C69 /* Useful Machinery */,
 			);
 			path = "AArch64-Explore";
+			sourceTree = "<group>";
+		};
+		6CC1EB99273CBA8D00C1B166 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CC1EB9A273CBA8D00C1B166 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CCA2919271798A7006E0C69 /* Useful Machinery */ = {
+			isa = PBXGroup;
+			children = (
+				6CC1EB98272CB32400C1B166 /* General.h */,
+				6CCA291B271798AF006E0C69 /* m1cycles.h */,
+				6CCA291A271798AF006E0C69 /* m1cycles.cpp */,
+				6CCA291E2717CF53006E0C69 /* assemblyBuffer.h */,
+				6CCA291F27190A5E006E0C69 /* dataBuffer.h */,
+				6CCA292027190C8F006E0C69 /* dataBuffer.cpp */,
+			);
+			name = "Useful Machinery";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCA292827236DF5006E0C69 /* ProbeStream.cpp in Sources */,
+				6CC1EB95272B692000C1B166 /* ProbeLatency.cpp in Sources */,
+				6CCA291C27179C58006E0C69 /* m1cycles.cpp in Sources */,
+				6CC1EB97272CB2E300C1B166 /* ProbeCache.cpp in Sources */,
 				6CA7E56E2717967C0069DB71 /* main.cpp in Sources */,
+				6CCA292127190C8F006E0C69 /* dataBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +186,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -191,7 +245,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -224,6 +278,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -233,6 +288,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -240,9 +296,10 @@
 		6CA7E5722717967C0069DB71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "AArch64-Explore/AArch64-Explore.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT54KSVR33;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,9 +307,10 @@
 		6CA7E5732717967C0069DB71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "AArch64-Explore/AArch64-Explore.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT54KSVR33;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -267,7 +325,7 @@
 				6CA7E5702717967C0069DB71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6CA7E5712717967C0069DB71 /* Build configuration list for PBXNativeTarget "AArch64-Explore" */ = {
 			isa = XCConfigurationList;
@@ -276,7 +334,7 @@
 				6CA7E5732717967C0069DB71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
