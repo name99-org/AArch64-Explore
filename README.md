@@ -21,3 +21,11 @@ Volume 1 is the cpu core. It's mostly unchanged from version 0.7, apart from min
 Volume 2 is the load store unit, cache, and memory. This is essentially completely new. Almost everything about cache in version 0.7 was incorrect, based on trying to fit my results to invalid results (for cache line length, for maximum cache bandwidth, and so on) I'd seen on the internet. Once I ran my own tests for these values and discovered what they were (along with some insight into why others had got them so wrong) everything fell into place much more satisfactorily.
 
 Volume 3 is the patent exploration stuff. I'm doing my best, but take it with a grain of salt; I've surely misinterpreted some things. The first half of this is substantially edited and cleaned up from version 0.7. The second half is still in the process of cleanup, but it seems enough people want a new release that that's the price we have to pay :-(
+
+Most people will simply want to read the PDFs. If you want to look at the Mathematica Notebooks, go ahead but to read them usefully you need to 
+(a) Hit the Enable Dynamic button at the top of the Notebook window. There is not much dynamic behavior, mainly the construction of the popup menu to allow you to jump around the (large!) notebook easily.
+(b) Choose "Evaluate Initialization Cells" from the Evaluation Menu. This will create all the various data structures, graphs, functions, etc in the notebook so that they will be live and can be interacted with.
+(c) (If necessary) ensure that the blue "Show Input Cells" is ticked so that you see the input for each graph or table. When creating the PDFs I hide the input, since PDF readers don't care about the technicalities of Mathematic input lines.
+(d) Most of the actual data has been "iconized" so that it's represented by a small Mathematica symbol rather than showing the entire (large) block of data. If you want to examine it, just Uniconize it (from the popup menu), or type in the symbol name in any open window. 
+
+Along with the three notebooks, I've also uploaded the SimulateQ notebook, used to create the simulations of various queue types (used when exploring the TLB and then the L1 cache). 
