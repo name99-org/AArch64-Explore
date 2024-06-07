@@ -10,7 +10,7 @@ vol 1 - 100 pages added giving differences from M1 to M4
 
 misc minor changes in the other volumes
 
-
+======================================================
 
 This code is provided for the benefit of others who also want to explore the M1 and subsequent Apple CPUs. Be aware that it is provided as a toolbox from which you can create your own experiments, not as a standalone binary to run blindly! By examining the code you will see how to set up the performance counters, force code to run on a P-core, and JIT a block of assembly which can then be executed.
 
