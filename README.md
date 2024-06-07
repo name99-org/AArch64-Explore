@@ -1,9 +1,13 @@
 # AArch64-ExploreExploration of Apple CPUs
 
 What's new?
+
 vol 6 - GPU
+
 vol 7 - ANE
+
 vol 1 - 100 pages added giving differences from M1 to M4
+
 misc minor changes in the other volumes
 
 
