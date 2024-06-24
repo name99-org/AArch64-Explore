@@ -1,6 +1,10 @@
 # AArch64-ExploreExploration of Apple CPUs
+What's new for 9.21?
+Fixed many tables and graphs in volume 2 which extended past the edge of the page, so could not be read. 
+A few minor corrections, grammar fixes in some other volumes. 
 
-What's new?
+
+What's new for 9.2?
 
 vol 6 - GPU
 
